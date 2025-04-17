@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+}
+
+
+nav {
+	display: flex;
+	flex-direction: row;	
+	height: 80px;
+	align-items: center;
+	width: 100%;
+	background-color: darkgray;
+}
+
+#project-name {
+	font-family: cursive;
+	font-size: 30px;
+	margin: 20px;
+	width: 20%;
+}
+
+
+#search {
+	width: 400px;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 20%;
+	margin-left: 120px;
+	font-family: sans-serif;
+	font-size: 18px;
+}
+
+
