@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picsify</title>
+    <link rel="stylesheet" href="image_card_style.css">
+</head>
+<body>
+
+	<img src="" alt="fox" id="image" height="200" width="300">
+
+
+	<script>
+		const params = new URLSearchParams(window.location.search);
+		const src = params.get('image');
+
+		document.getElementById("image").src = src;
+	</script>
+</body>
+</html>
