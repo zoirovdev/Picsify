@@ -91,3 +91,15 @@ a > img {
 	border-radius: 50%;
 	background-color: #D9DFC6;
 }
+
+
+#image-container {
+	background-color: gray;
+	margin-left: 100px;
+	width: 80%;
+}
+
+#image-container > img {
+	width: 50%;
+	height: 100%;
+}
