@@ -8,12 +8,42 @@
 </head>
 <body>
 	<nav>
-    		<h1 id="project-name">Picsify</h1>
+    		<a href="index.html" id="project-name">Picsify</a>
 		<input type="text" id="search" placeholder="Search">
 	</nav>
 
 	<div id="image-container">
-		<img src="" alt="fox" id="image" height="200" width="300">
+		<img src="" alt="fox" id="image">
+		<div id="pic-data">
+			<div class="id-label">
+			 	<p id="img-id-label">Id</p>
+				<p id="img-id"></p>
+			</div>
+			<div class="id-label">
+				<p id="img-slug-label">Slug</p>
+				<p id="img-slug"></p>
+			</div>
+			<div class="id-label">
+				<p id="created-at-label">Created at</p>
+				<p id="created-at"></p>
+			</div>
+			<div class="id-label">
+				<p id="updated-at-label">Updated at</p>
+				<p id="updated-at"></p>
+			</div>
+			<div class="id-label">
+				<p id="description-label">Description</p>
+				<p id="description"></p>
+			</div>
+			<div class="id-label">
+				<p id="height-label">Height</p>
+				<p id="height"></p>
+			</div>
+			<div class="id-label">
+				<p id="width-label">Width</p>
+				<p id="width"></p>
+			</div>
+		</div>
 	</div>
 
 	<script>
@@ -21,6 +51,16 @@
 		const src = params.get('image');
 
 		document.getElementById("image").src = src;
+		document.getElementById("img-id").innerText = params.get('id')
+		document.getElementById("img-slug").innerText = params.get('slug');
+		document.getElementById("created-at").innerText = params.get("created_at")
+		document.getElementById("updated-at").innerText = params.get("updated_at");
+		document.getElementById("description").innerText = params.get("description");
+		document.getElementById("height").innerText = params.get("height")/10 + "px";
+		document.getElementById("width").innerText = params.get("width")/10 + "px";
+		document.getElementById("image").style.height = params.get('height')/10 + "px";
+		document.getElementById('image').style.width = params.get('width')/10 + "px";
+
 	</script>
 </body>
 </html>
