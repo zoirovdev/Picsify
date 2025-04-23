@@ -52,6 +52,7 @@ input:focus {
 	border: 1px solid lightgray;
 	width: 400px;
 	height: 350px;
+	border-radius: 5px;
 }
 
 .btn-container {
@@ -74,19 +75,23 @@ input:focus {
 }
 
 .card > a {
-	width: 400px;
-	height: 280px;	
-	background-color: gray;
+  width: 400px;
+  height: 280px;
+  overflow: hidden;
+  display: block;
+  background-color: #D3CA79;
 }
 
 .card > a > img {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* or "contain" if you want to see the full image */
 }
+
 
 .btn > i {
 	font-size: 26px;
-	color: #03A791;
+	color: #222222;
 }
 
 .btn:hover {

@@ -27,15 +27,13 @@ async function getAll(){
 	const data = await response.json()
 
 
-	for(let i = 0; i < data.length-1; i++){
+	for(let i = 0; i < 10; i++){
 		
 		console.log(data[i]);
 		const cardEl = document.createElement("div");
 		cardEl.classList.add("card");
 
 		const anchorEl = document.createElement("a");
-		anchorEl.style.width = "100%";
-		anchorEl.style.height = "280px";
 		const params = new URLSearchParams({ image: `${data[i].urls.small}`, id: data[i].id, slug: data[i].slug,
 			created_at: data[i].created_at, description: data[i].alt_description, updated_at: data[i].updated_at,
 			height: data[i].height, width: data[i].width });
@@ -45,8 +43,8 @@ async function getAll(){
 		const imgEl = document.createElement("img");
 		imgEl.src = `${data[i].urls.small}`
 		imgEl.alt = 'fox'
-		imgEl.style.height = "100%"
-		imgEl.style.width = "100%"
+		imgEl.style.height = data[i].height / 10 + "px"
+		imgEl.style.width = data[i].width / 10 + "px"
 
 		anchorEl.appendChild(imgEl);
 
@@ -56,13 +54,12 @@ async function getAll(){
 		const btnEl = document.createElement("button");
 		btnEl.type = "button"
 		btnEl.classList.add("btn");
-		
+		btnEl.id = "download"
 
 		btnEl.addEventListener("click", () => {
 			const link = document.createElement("a");
 			link.href = `${data[i].links.download}`;
 			link.download = `${data[i].urls.small}`;
-			link.target = '_blank';
 			link.click();
 		});
 
