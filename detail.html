@@ -53,8 +53,8 @@
 		document.getElementById("image").src = src;
 		document.getElementById("img-id").innerText = params.get('id')
 		document.getElementById("img-slug").innerText = params.get('slug');
-		document.getElementById("created-at").innerText = params.get("created_at")
-		document.getElementById("updated-at").innerText = params.get("updated_at");
+		document.getElementById("created-at").innerText = new Date(params.get("created_at")).toDateString();
+		document.getElementById("updated-at").innerText = new Date(params.get("updated_at")).toDateString();
 		document.getElementById("description").innerText = params.get("description");
 		document.getElementById("height").innerText = params.get("height")/10 + "px";
 		document.getElementById("width").innerText = params.get("width")/10 + "px";
